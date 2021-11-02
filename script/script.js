@@ -6,24 +6,6 @@ const data = await resp.json()
 return data;
 // const {nombre,imagenP,imagen1, imagen2, descripcion,precio,talla, id} = data
 }
-const urlCar = 'http://localhost:40001/carrito'     
-const agregarCarrito = document.getElementById('agregarCarrito');
-agregarCarrito.addEventListener('click', async()=>{
-    await fetch(urlCar, {
-        method: "POST",
-        body: JSON.stringify({
-            nombre,
-            imagenP,
-            descripcion,
-            precio,
-            talla
-        }),
-        headers: {
-            "Content-Type": "application/json; charset=UTF-8"
-        },
-    });
-    console.log("agregaste al carrito")
-})
 
   
 const carrito = document.getElementById('carrito');
@@ -32,36 +14,12 @@ console.log("ingresaste al carrito")
 // const cajaCar = document.createElement('div')
 // cajaCar.classList.add('caja__car')
 })
-let contenidoCompra = document.querySelector('.offcanvas-body');
-const comprar = document.getElementById('comprar');
-comprar.addEventListener('click',async()=>{
- const  dataCompra = await getData(url)
-dataCompra.forEach(info=>{
-const {imagenP, nombre, precio} = info
-    console.log(info)
 
 
-    contenidoCompra.innerHTML = " ";
-    contenidoCompra.innerHTML +=`
-        <div class"cajaVenta">
-                 <div class="venta">
-                    <img  src="${imagenP}">
-                </div>   
-            
-            <h3>${nombre}</h3>
-            <span>${precio}</span>
-      <p>Shipping, taxes, and discount codes calculated at checkout<p>
-      <p>Subtotal<span>${precio}</span></p>
-      <button type="button" class="btn btn-chekout">CHECK OUT</button>
 
-        </div>  
-         <p>Please Note: All items are pre-order and will ship in 6-10 weeks. Guaranteed holiday delivery</p>
 
-        `
+    
 
-})
-
-})
 
 
 
@@ -70,10 +28,9 @@ const {imagenP, nombre, precio} = info
 
 // muestra productos en collecion
 let productos = document.getElementById('productos')
-
 let mostrador=document.getElementById('mostrador')
-
 let url = ' http://localhost:4019/articulos';
+
 productos.addEventListener('click', async () => {
     console.log("hola")
     mostrador.innerHTML = ''
@@ -90,7 +47,6 @@ data.forEach(art => {
                            <a href="#" onClick="shop(${id})" class="">BUY IT</a>
                            </div>
                            `
-
     })
 })
 
@@ -127,11 +83,55 @@ const shop = async(id) =>{
                           <a Style="color:black;" href="#" class="d-row p-4">XL</a>
                           <a Style="color:black;" href="#" class="d-row p-4">XXL</a>
                           </div>
-                          <a href="#" onClick="(${id})" class="btn btn-dark d-flex justify-content-center mt-4">ADD TO CART</a>
-                          <a href="#" onClick="(${id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="btn btn-primary d-flex justify-content-center mt-2">BUY IT NOW</a>
+                          <button id="agregarCarrito" class="aggCar btn">ADD TO CARD</button>
+                          <button id="comprar"class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
                           <span class="d-flex justify-content-left mt-2"> ${arregloid.descripcion}</span></div></div>`
 
+
+
+
+                          let contenidoCompra = document.querySelector('.offcanvas-body');
+                          const comprar = document.getElementById('comprar');
+                          comprar.addEventListener('click',async()=>{
+                              contenidoCompra.innerHTML = " ";
+                              contenidoCompra.innerHTML +=`
+                                  <div class"cajaVenta">
+                                           <div class="venta">
+                                              <img  src="${arregloid.imagenP}">
+                                          </div>   
+                                      
+                                      <h3>${arregloid.nombre}</h3>
+                                      <span>${arregloid.precio}</span>
+                                <p>Shipping, taxes, and discount codes calculated at checkout<p>
+                                <p>Subtotal<span>${arregloid.precio}</span></p>
+                                <button type="button" class="btn btn-chekout">CHECK OUT</button>
+                          
+                                  </div>  
+                                   <p>Please Note: All items are pre-order and will ship in 6-10 weeks. Guaranteed holiday delivery</p>
+                          
+                                  `     
+                          })
+                        const urlCar = 'http://localhost:4001/carrito'     
+                        const agregarCarrito = document.getElementById('agregarCarrito');
+                        agregarCarrito.addEventListener('click', async()=>{
+                         await fetch(urlCar, {
+                        method: "POST",
+                        body: JSON.stringify({
+                        nombre:`${arregloid.nombre}`,
+                        imagenP:`${arregloid.imagenP}`,
+                        descripcion:`${arregloid.descripcion}`,
+                        precio:`${arregloid.precio}`
+                        
+                         }),
+                headers: {
+                    "Content-Type": "application/json; charset=UTF-8"
+                     },
+                    });
+         console.log("agregaste al carrito")
+        })
+
 }
+
 
 
 

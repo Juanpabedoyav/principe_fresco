@@ -1,12 +1,46 @@
 {
-    "carrito":[
-        {
-            "nombre": "Crown Sweatshirt Men",
-            "imagenP": "",
-            "descripcion":"Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
-            "precio": 5,
-            "talla": "S",
-            "id": 1
-        }
-    ]
+  "carrito": [
+    {
+      "nombre": "Crown Sweatshirt Men",
+      "imagenP": "",
+      "descripcion": "Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
+      "precio": 5,
+      "id": 1
+    },
+    {
+      "nombre": "Fresh-Prince Sweater Black Woman",
+      "imagenP": "./img/FreshP.png",
+      "descripcion": "Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
+      "precio": "75",
+      "id": 2
+    },
+    {
+      "nombre": "Fresh Sweatshirt Men",
+      "imagenP": "./img/StripeP.png",
+      "descripcion": "Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
+      "precio": "85",
+      "id": 3
+    },
+    {
+      "nombre": "Fresh-Prince Sweater White Woman",
+      "imagenP": "./img/FreshPblanco.png",
+      "descripcion": "Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
+      "precio": "75",
+      "id": 4
+    },
+    {
+      "nombre": "Pose For It Tee",
+      "imagenP": "./img/PoseP.png",
+      "descripcion": "Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
+      "precio": "45",
+      "id": 5
+    },
+    {
+      "nombre": "Crown Sweatshirt Men",
+      "imagenP": "./img/CrownP.png",
+      "descripcion": "Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
+      "precio": "80",
+      "id": 6
+    }
+  ]
 }
