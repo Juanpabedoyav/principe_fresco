@@ -75,7 +75,7 @@ const shop = async(id) =>{
                           <a Style="color:black;" href="#" class="d-row p-4">XXL</a>
                           </div>
                           <button id="agregarCarrito" class="aggCar btn">ADD TO CARD</button>
-                          <button id="comprar"class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
+                          <button id="comprar"class="btn btn btnComprar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
                           <span class="d-flex justify-content-left mt-2"> ${arregloid.descripcion}</span></div></div>`
 
 
@@ -87,12 +87,17 @@ const shop = async(id) =>{
                                   <div class"cajaVenta">
                                            <div class="venta">
                                               <img  src="${arregloid.imagenP}">
+                                              <div class="detalle">
+
+                                              <h3>${arregloid.nombre}</h3>
+                                              <span>$ ${arregloid.precio}</span>
+                                              </div>
+                                              
                                           </div>   
-                                      
-                                      <h3>${arregloid.nombre}</h3>
-                                      <span>${arregloid.precio}</span>
+                                       
+                                          <p>Subtotal${arregloid.precio}</p>
+                                        
                                 <p>Shipping, taxes, and discount codes calculated at checkout<p>
-                                <p>Subtotal<span>${arregloid.precio}</span></p>
                                 <button type="button" class="btn btn-chekout">CHECK OUT</button>
                           
                                   </div>  
