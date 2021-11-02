@@ -3,8 +3,8 @@
         {
             "nombre": "Crown Sweatshirt Men",
             "imagenP": "./img/CrownP.png",
-            "imagen1": "",
-            "imagen2": "",
+            "imagen1": "./img/Crown2.png",
+            "imagen2": "./img/Crown3.png",
             "descripcion":"Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater. Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band. Cotton/Poly blend.",
             "precio": 80,
             "talla": "S",
