@@ -40,22 +40,35 @@ footer{
 }
 
 .venta{
-    width: 130px;
-    height: 130px;
+    display: flex;
+    flex-direction: row;
+    /* width: 130px; */
+    /* height: 130px; */
     /* border: 1px solid red; */
 }
+.h3, h3 {
+    font-size: calc(1rem + .6vw);
+    margin-left: 10px;
+}
+.detalle>span{
+    position: relative;
+    left:14px;
+    top:30px;
+    display: block;
+    font-weight: 700;
+}
+
 .venta img{
-    width: 100%;
-    height:100%;
-
+    width: 150px;
+    height:150px;
+    object-fit: cover;
 }
-.cajaVenta{
-    border: 1px solid red;
 
-}
 .offcanvas-body{
-    
-    border: 1px solid green;
+
+}
+.offcanvas-end{
+    width: 500px;
 
 }
 .navbar-collapse {

@@ -97,12 +97,17 @@ const shop = async(id) =>{
                                   <div class"cajaVenta">
                                            <div class="venta">
                                               <img  src="${arregloid.imagenP}">
+                                              <div class="detalle">
+
+                                              <h3>${arregloid.nombre}</h3>
+                                              <span>$ ${arregloid.precio}</span>
+                                              </div>
+                                              
                                           </div>   
-                                      
-                                      <h3>${arregloid.nombre}</h3>
-                                      <span>${arregloid.precio}</span>
+                                       
+                                          <p>Subtotal${arregloid.precio}</p>
+                                        
                                 <p>Shipping, taxes, and discount codes calculated at checkout<p>
-                                <p>Subtotal<span>${arregloid.precio}</span></p>
                                 <button type="button" class="btn btn-chekout">CHECK OUT</button>
                           
                                   </div>  
