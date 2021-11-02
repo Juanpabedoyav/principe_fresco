@@ -10,3 +10,31 @@ height: 56px;
     font-size: 1.1rem;
     transition: .2s;
 }
+.activar{
+    /* display: block; */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:     #1d1d1d48;
+
+}
+.venta{
+    width: 130px;
+    height: 130px;
+    border: 1px solid red;
+
+}
+.venta img{
+    width: 100%;
+    height:100%;
+
+}
+.cajaVenta{
+    border: 1px solid red;
+
+}
+.offcanvas-body{
+    
+    border: 1px solid green;
+
+}
