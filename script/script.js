@@ -16,20 +16,10 @@ console.log("ingresaste al carrito")
 })
 
 
-
-
-    
-
-
-
-
-
-
-
 // muestra productos en collecion
 let productos = document.getElementById('productos')
 let mostrador=document.getElementById('mostrador')
-let url = ' http://localhost:4019/articulos';
+let url = ' http://localhost:4000/articulos';
 
 productos.addEventListener('click', async () => {
     console.log("hola")
@@ -55,6 +45,12 @@ const shop = async(id) =>{
     productos.innerHTML = 'Buy Products'
     let resp = await fetch(url)
     let data = await resp.json()
+    
+    let img1=data[0].imagenP
+    let img2=data[1].imagenP
+    let img3=data[2].imagenP
+
+    
     let arregloid = data.find(elegir => elegir.id == id)
     let imagenP = arregloid.imagenP;
     let imagen1 = arregloid.imagen1;
@@ -85,9 +81,16 @@ const shop = async(id) =>{
                           </div>
                           <button id="agregarCarrito" class="aggCar btn">ADD TO CARD</button>
                           <button id="comprar"class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
-                          <span class="d-flex justify-content-left mt-2"> ${arregloid.descripcion}</span></div></div>`
+                          <span class="d-flex justify-content-left mt-2"> ${arregloid.descripcion}</span></div></div>
+                          
+                          <div id="visual-productos">
+                          <h1> YOU MAY ALSO LIKE</h1>
+                          <img style="width:100px" src="${img1}" alt=""></a>
+                          <img style="width:100px" src="${img2}" alt=""></a>
+                          <img style="width:100px" src="${img3}" alt=""></a>
+                          </div>
 
-
+                          `
 
 
                           let contenidoCompra = document.querySelector('.offcanvas-body');

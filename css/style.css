@@ -38,3 +38,8 @@ height: 56px;
     border: 1px solid green;
 
 }
+#visual-productos{
+    margin-bottom: 30px;    
+    width: 49%;padding: 5px;
+    justify-content: center;
+}
