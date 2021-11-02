@@ -8,28 +8,19 @@ return data;
 }
 
   
-const carrito = document.getElementById('carrito');
+/*const carrito = document.getElementById('carrito');
 carrito.addEventListener('click', ()=>{
 console.log("ingresaste al carrito")
 // const cajaCar = document.createElement('div')
 // cajaCar.classList.add('caja__car')
-})
-
-
-
-
-    
-
-
-
-
-
+})*/
 
 
 // muestra productos en collecion
 let productos = document.getElementById('productos')
 let mostrador=document.getElementById('mostrador')
 let url = ' http://localhost:4019/articulos';
+let carrito=document.getElementById('carrito')
 
 productos.addEventListener('click', async () => {
     console.log("hola")
@@ -63,11 +54,11 @@ const shop = async(id) =>{
     mostrador.innerHTML = `<div class="container">
                           <div class="row">
                           <div class="col-2">
-                          <a href="#" onClick="('${imagenP}')" class="d-flex ">
+                          <a href="#" onClick="cambio('${imagenP}')" class="d-flex ">
                           <img style="width:100px" src="${imagenP}" alt=""></a>
-                          <a href="#" onClick="('${imagen1}')" class="d-flex mt-3">
+                          <a href="#" onClick="cambio('${imagen1}')" class="d-flex mt-3">
                           <img style="width:100px" src="${imagen1}" alt=""></a>
-                          <a href="#" onClick="('${imagen2}')" class="d-flex mt-3">
+                          <a href="#" onClick="cambio('${imagen2}')" class="d-flex mt-3">
                           <img style="width:100px" src="${imagen2}" alt=""></a>
                           </div>
                           <div class="col-4">
@@ -86,8 +77,6 @@ const shop = async(id) =>{
                           <button id="agregarCarrito" class="aggCar btn">ADD TO CARD</button>
                           <button id="comprar"class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
                           <span class="d-flex justify-content-left mt-2"> ${arregloid.descripcion}</span></div></div>`
-
-
 
 
                           let contenidoCompra = document.querySelector('.offcanvas-body');
@@ -111,10 +100,10 @@ const shop = async(id) =>{
                           
                                   `     
                           })
-                        const urlCar = 'http://localhost:4001/carrito'     
+                        const urlCar = 'http://localhost:4021/carrito'     
                         const agregarCarrito = document.getElementById('agregarCarrito');
                         agregarCarrito.addEventListener('click', async()=>{
-                         await fetch(urlCar, {
+                        await fetch(urlCar, {
                         method: "POST",
                         body: JSON.stringify({
                         nombre:`${arregloid.nombre}`,
@@ -129,18 +118,48 @@ const shop = async(id) =>{
                     });
          console.log("agregaste al carrito")
         })
+    
+        
+        }
 
+
+        const urlCar = 'http://localhost:4021/carrito' 
+        const carritofuncion = async() => {
+
+            let rest = await fetch(urlCar);
+            let data = await rest.json()
+            let pagar = Object.values(data).reduce((acc, { cantidad, precio }) => acc + 1* Number(precio), 0)
+            let cantidad = Object.values(data).reduce((acc, { cantidad }) => acc + 1, 1)
+            mostrador.innerHTML = '';
+            mostrador.innerHTML = `<div class="container">
+                                  <table class="table">
+                                  <thead class="table-gray">
+                                  <tr> 
+                                  <th scope="col m-0">Items</th>
+                                  <th scope="col">Nombre</th>
+                                  <th scope="col">Precio</th>
+                                  <th scope="col">Cantidad</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody id="detalle">
+                                  </tbody>
+                                  <tfoot>
+                                  <td scope="row" class=""> 
+                                  <a class="btn btn-gray">Comprar todo</a> 
+                                  <a  class="btn btn-yellow" onclick="">Limpiar</a></td>
+                                  <td></td>
+                                  <td>$ ${pagar}.00</td>
+                                  <td>${cantidad}</td>
+                                  </tfoot>
+                                  </table>
+                                  </div>`
+            let pintarCarro = document.getElementById('detalle')
+            data.forEach(info => {
+                const { nombre, imagenP, precio, } = info;
+                pintarCarro.innerHTML += `<td scope="row">
+                <img style="height: 20%; width: 20%"  src="${imagenP}" alt=""> 
+                </td><td>${nombre}</td><td>${precio}</td><td>${1}</td>`
+            })}
+const cambio = (i) => {
+    document.getElementById('imagecambio').setAttribute('src', i);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
