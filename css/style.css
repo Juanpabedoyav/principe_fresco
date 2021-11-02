@@ -1,0 +1,12 @@
+.btn{
+background: black;
+width: 224px;
+color: white;
+font-weight: 700;
+height: 56px;
+}
+.btn:hover{
+    color: white;
+    font-size: 1.1rem;
+    transition: .2s;
+}
