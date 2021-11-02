@@ -11,8 +11,7 @@ return data;
 const carrito = document.getElementById('carrito');
 carrito.addEventListener('click', ()=>{
 console.log("ingresaste al carrito")
-// const cajaCar = document.createElement('div')
-// cajaCar.classList.add('caja__car')
+
 })
 
 
@@ -84,7 +83,7 @@ const shop = async(id) =>{
                           <a Style="color:black;" href="#" class="d-row p-4">XXL</a>
                           </div>
                           <button id="agregarCarrito" class="aggCar btn">ADD TO CARD</button>
-                          <button id="comprar"class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
+                          <button id="comprar"class="btn btn btnComprar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BUY NOW</button>
                           <span class="d-flex justify-content-left mt-2"> ${arregloid.descripcion}</span></div></div>`
 
 

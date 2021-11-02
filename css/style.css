@@ -10,19 +10,39 @@ height: 56px;
     font-size: 1.1rem;
     transition: .2s;
 }
-.activar{
-    /* display: block; */
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background:     #1d1d1d48;
+.aggCar{
+    margin-top: 10px;
+
+    background-color: black;
+}
+.btnComprar{
+    margin-top: 10px;
+    background-color: #0d6efd;
 
 }
+.btn-chekout{
+        background-color: #0d6efd;
+    border: none;
+
+}
+footer{
+    height: 320px;
+    background-color:#1D1D1D;
+
+}
+.imgLogo{
+    margin: 60px auto;
+    padding-top: 50px;
+    text-align: center;
+
+    /* border: 1px solid red; */
+
+}
+
 .venta{
     width: 130px;
     height: 130px;
-    border: 1px solid red;
-
+    /* border: 1px solid red; */
 }
 .venta img{
     width: 100%;
@@ -37,4 +57,17 @@ height: 56px;
     
     border: 1px solid green;
 
+}
+.navbar-collapse {
+justify-content: space-around;
+margin-left: 150px;
+}
+.redes{
+    text-align: center;
+}
+.red{
+    font-size:2rem;
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
 }
