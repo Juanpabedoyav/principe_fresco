@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="formulario" class="formulario"><br>
+        <form action="" class="form" id="form" ><!--functionSubmit(event)-->
+            <h2>FORMULARIO REGISTRO DE PRODUCTOS</h2>
+           
+            <div class="campo">
+                <div><label for="name">Nombre Producto</label><br>
+                <input id="name" name="name" class=" form-control" type="text" placeholder=""><br>
+           
+                <label for="imagen1" >Imagen1</label><br>
+                <input id="imagen1" name="imagen1" class=" form-control" type="text" placeholder=""><br>
+
+                <label for="imagen2" >Imagen2</label><br>
+                <input id="imagen2" name="imagen2" class=" form-control" type="text" placeholder=""><br>
+
+                <label for="imagen3" >Imagen3</label><br>
+                <input id="imagen3" name="imagen3" class=" form-control" type="text" placeholder=""><br>
+           
+                <label for="descripcion" >Descripcion</label><br>
+                <input id="description" name="description" class=" form-descripcion" type="text" placeholder=""><br>
+
+                
+
+                <label for="precio" >Precio</label><br>
+                <input id="precio" name="precio" class=" form-control" type="number" placeholder=""><br>
+                
+                         
+            
+                <label id="label-edit" for="id">Id</label><br>
+                <input id="id" name="id" class="form-control" type="text" placeholder=""
+                readonly><br><br>
+            </div>
+            <div class="contenedorBotones">
+           
+                <button id="btnGuardar" class="boton-operativo"type="submit" class="">Guardar</button>
+            
+                <button id="btnNombre" class="boton-operativo"type="button" class="">Buscar por Nombre</button>
+            
+                <button id="btnEditar" class="boton-operativo" type="button" class="">Editar</button>
+           
+                <button id="btnEliminar" class="boton-operativo"  type="button" class="">Eliminar</button>
+            
+            </div>  
+              
+            <div><button id="regresar" class="regresar">Regresar</button></div>
+           
+        </form>
+    <script src="./script/formulario.js"></script>
+</body>
+</html>

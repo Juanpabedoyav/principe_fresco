@@ -1,0 +1,52 @@
+body{
+    background-color: white;
+}
+#formulario{
+    display: flex;    
+    margin-top: 80px;
+    position: absolute;
+    text-align: center;    
+    background-color:silver;
+    left: 20%;
+    padding:20px  ;
+    margin-bottom: 70px;
+    color: rgb(14, 13, 13);
+    width: 60%;
+    border:solid;
+    
+
+}
+.form{
+    justify-content: center;   
+    background-color:transparent;
+    width: 100%;
+    font-size: large;   
+}
+.campo{
+    justify-content: center;
+}
+.form-control{
+    width: 60%;
+}
+.form-descripcion{
+    width: 60%;
+    height: 80px;
+    inline-size: 60%;
+  
+  
+  
+}
+.boton-operativo{
+    width: 150px;
+    background-color: slategray;
+    color:white;
+    height: 40px;
+    font-size: 15px;
+}
+.regresar{
+ margin-top:20px;
+    width:200px;
+    height: 40px;
+    background-color: rgb(88, 33, 33);
+    color:white
+}
