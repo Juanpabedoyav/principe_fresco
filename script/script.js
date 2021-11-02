@@ -5,9 +5,9 @@ const resp = await fetch (url);
 const data = await resp.json()
 const {nombre,imagenP,imagen1, imagen2, descripcion,precio,talla, id} = data
 }
+const urlCar = 'http://localhost:40001/carrito'     
 const agregarCarrito = document.getElementById('agregarCarrito');
-agregarCarrito.addEventListener('click', ()=>{
-let urlCar = 'http://localhost:40001/carrito'     
+agregarCarrito.addEventListener('click', async()=>{
     await fetch(urlCar, {
         method: "POST",
         body: JSON.stringify({
@@ -24,18 +24,19 @@ let urlCar = 'http://localhost:40001/carrito'
     console.log("agregaste al carrito")
 })
 
-
-
+  
 const carrito = document.getElementById('carrito');
 carrito.addEventListener('click', ()=>{
 console.log("ingresaste al carrito")
+// const cajaCar = document.createElement('div')
+// cajaCar.classList.add('caja__car')
 })
 
 
 
 let productos = document.getElementById('productos')
 let mostrador=document.getElementById('mostrador')
-let url = ' http://localhost:4019/articulos';
+const url = ' http://localhost:4019/articulos';
 productos.addEventListener('click', async () => {
     console.log("hola")
     mostrador.innerHTML = ''

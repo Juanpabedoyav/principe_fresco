@@ -32,7 +32,7 @@
           <a class="nav-link" href="#"><i class="far fa-user"></i></a>
         </li>
         <li class="nav-item">
-          <a id = "carrito" class="nav-link "><i class="fas fa-shopping-bag"></i></a>
+          <a id = "carrito" class="nav-link" data-bs-toggle="modal" data-bs-target="#agregarCarrito"href="#"><i class="fas fa-shopping-bag"></i></a>
         </li>
       </ul>
     </div>
@@ -40,7 +40,26 @@
 </nav>
 </header>
     <button id="agregarCarrito" class="aggCar btn">ADD TO CARD</button>
-    
+ 
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
 <ul class="nav nav-tabs d-flex justify-content-center"></ul>
     <li class="nav-item d-flex justify-content-center" >
         <button class="nav-link text-dark" id="productos" 
